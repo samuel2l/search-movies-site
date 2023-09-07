@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<form method="POST" action="/"  >
+    {{form.hidden_tag()}}
+
+    {{form.title.label}}
+    {{form.title(placeholder="My movie")}}
+
+<br>
+<br>
+        {{form.movie_type.label}}
+        {{form.movie_type}}
+
+<br>
+<br>
+         {{form.length.label}}
+        {{form.length}}
+
+<br>
+<br>
+    {{form.submit()}}
+</form>
+<h1>{{data['Title']}}</h1>
+<h6>{{data['Year']}}</h6>
+<h6>{{data['Released']}}</h6>
+<h6>{{data['BoxOffice']}}</h6>
+<h6>{{data['Runtime']}}</h6>
+<h6>{{data['Genre']}}</h6>
+<p>{{data['Plot']}}</p>
+<p>{{data['imdbRating'] }}</p>
+{%if data['totalSeasons']%}
+<p>{{data['totalSeasons'] }}</p>
+{% endif %}
+
+</body>
+</html>
