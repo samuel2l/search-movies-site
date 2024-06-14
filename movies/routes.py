@@ -23,7 +23,7 @@ def home():
         print(form.movie_type.data)
         params['plot'] = form.length.data
         print(form.length.data)
-        url = f'https://www.omdbapi.com/?apikey=88fc25ae&'
+        url = f'https://www.omdbapi.com/?apikey='#add your api key
         response = requests.get(url, params=params)
         if response.status_code == 200:
 

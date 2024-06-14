@@ -11,6 +11,6 @@ plot_len = input("Long or shortened plot?").lower()
 params['t'] = title
 params['type'] = movie_type
 params['plot'] = plot_len
-url = f'https://www.omdbapi.com/?apikey=88fc25ae&'
+url = f'https://www.omdbapi.com/?'#attach your api key
 response = requests.get(url,params=params)
 print(response.json())
