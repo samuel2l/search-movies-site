@@ -27,16 +27,18 @@
     {{form.submit()}}
 </form>
 <h1>{{data['Title']}}</h1>
-<h6>{{data['Year']}}</h6>
-<h6>{{data['Released']}}</h6>
-<h6>{{data['BoxOffice']}}</h6>
-<h6>{{data['Runtime']}}</h6>
-<h6>{{data['Genre']}}</h6>
+<h4>IMDB: {{data['imdbRating'] }}</h4>
+<h3>Release Year: {{data['Released']}}  Box Office: {{data['BoxOffice']}} Genre: {{data['Genre']}}</h3>
 <p>{{data['Plot']}}</p>
-<p>{{data['imdbRating'] }}</p>
+<h4>Length: {{data['Runtime']}}</h4>
+
+
+
+
 {%if data['totalSeasons']%}
 <p>{{data['totalSeasons'] }}</p>
 {% endif %}
 
 </body>
 </html>
+
